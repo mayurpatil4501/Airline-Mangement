@@ -99,8 +99,10 @@ export default function App() {
         {/* Database & Active User Role Profile */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
           <div className="glass-panel" style={{ padding: '6px 12px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <Database size={13} color="#10b981" />
-            <span style={{ fontSize: '11px', color: '#10b981', fontWeight: 600 }}>SQLite Active (:5000)</span>
+            <Database size={13} color="#38bdf8" />
+            <span style={{ fontSize: '11px', color: '#38bdf8', fontWeight: 600 }}>
+              {typeof window !== 'undefined' && window.location.hostname !== 'localhost' ? 'Cloud System Online' : 'SQLite Active (:5000)'}
+            </span>
           </div>
 
           {currentUser ? (
